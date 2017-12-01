@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(compressed_image_transport)
+cmake_policy(SET CMP0060 NEW)
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV "2.4" COMPONENTS core highgui imgproc REQUIRED)
+
 find_package(catkin REQUIRED COMPONENTS cv_bridge dynamic_reconfigure image_transport)
 
 # generate the dynamic_reconfigure config file
